@@ -27,7 +27,7 @@
     <script src="js/vendors/modernizr.js"></script>
     <script src="js/vendors/scrollReveal.js"></script>
     <script src="js/vendors/classie.js"></script>
-    <script src="js/vendors/jquery.waypoints.min.js"></script>
+    <script language="JavaScript" src="js/vendors/gen_validatorv31.js" type="text/javascript"></script>
     <!-- endbuild-->
     <script>
       if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
@@ -40,7 +40,7 @@
   <body class="demo-4">
     <div class="page-content">
       <div id="header" class="header">
-        <div class="header-container">
+        <div id="header-container" class="header-container">
           <div id="search" class="search">
             <div class="containerMorph">
               <div id="morphsearch" class="morphsearch">
@@ -69,8 +69,8 @@
             </div>
             <!-- /container-->
           </div>
-          <div class="logo"><a href="index.html"><img id="logo" src="images/sprites/logoEnzo.svg"></a></div>
-          <div class="log-in">
+          <div id="logo" class="logo"><a href="index.html"><img id="logo" src="images/sprites/logoEnzo.svg"></a></div>
+          <div id="log-in" class="log-in">
             <div class="notificationNew">
               <div id="new" class="new animated zoomIn">
                 <p id="newNotification">1</p>
@@ -78,7 +78,7 @@
             </div>
             <div id="message_panel" class="message_panel"><img id="message" src="images/sprites/message.svg">
               <div id="message_input" class="message_input"><i id='x-message' class="fa fa-times"></i>
-                <form action="contact.php" method="post" enctype="text/plain" class="ms_form">
+                <form action="contact-form-handler.php" method="post" enctype="text/plain" class="ms_form">
                   <h5>Name:</h5>
                   <input type="text" name="ms_name" class="ms_name">
                   <h5>Email:</h5>
@@ -114,16 +114,10 @@
           <h4>I make responsive and cross-browsing websites using what I call the <pre> Killer Toolset.</pre> Knowing that you can build something that can change somebody's life is what really drives me. <br>Napoleon once said: <br><h5><i class="fa fa-quote-left"></i> L'immortalità è il ricordo che si lascia nella memoria della gente <i class="fa fa-quote-right"></i></h5></h4>
           <p>( no idea what it says? <i class="fa fa-search"></i> it !)</p>
         </div>
-        <div id="about-me-text2" class="about-me-text2">
-          <h1>Places I've lived to...</h1>
-          <div class="dummy dummy-image">
-            <div class="dummy-pois">
-              <div class="tooltip tooltip-west"><span class="tooltip-item"></span><span class="tooltip-content">Carebean blood in the veans to give this guy Tropical creativity</span></div>
-              <div class="tooltip tooltip-east"><span class="tooltip-item"></span><span class="tooltip-content">Whea! Los Angeles, Baby !!!</span></div>
-              <div class="tooltip tooltip-west"><span class="tooltip-item"></span><span class="tooltip-content">Spaghetti, pizza, bella gente... Italy on me</span></div>
-              <div class="tooltip tooltip-east"><span class="tooltip-item"></span><span class="tooltip-content">New York city - a.k.a. The Big Apple - a.k.a. The Best City in the world</span></div>
-            </div>
-          </div>
+        <div id="about-me-text2" class="about-me-text2"><a href="https://www.youtube.com/channel/UCw07WDpSegVtfTimoPZ8sxw/featured" target="_blank"><img src="images/sprites/crea_sin_codigo.png"></a>
+          <!--h1 <pre> Enzo Vezzaro </pre> is a <pre> Web Developer </pre> based in <pre> Los Angeles, CA </pre>-->
+          <h4>... While learning new Web Technologies, <br>I also teach how to use the Adobe product <pre> Adobe Muse </pre><br> ( in Spanish )</h4>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLJAeL08_J5_tfOx57u1qbU-CrK5jzAtn5" frameborder="0" allowfullscreen=""></iframe>
         </div>
         <div id="about-me-text3" class="about-me-text3">
           <h1>Interest:</h1>
@@ -154,7 +148,7 @@
                 <div class="card__content"><i class="card__btn-close fa fa-times"></i>
                   <div class="card__copy">
                     <div class="meta"><img src="images/sprites/profile.png" alt="author01" class="meta__avatar"><span class="meta__author">
-                        <h2>Ultimate Front End Developer Tool</h2></span><span class="meta__date">06/19/2015</span></div>
+                        <h2>Ultimate Front End<br> Developer Tool</h2></span><span class="meta__date"> </span></div>
                     <p>Start Your Project with Gulp, SASS, Jade, and Bourbon suite.</p>
                     <h3>Features </h3>
                     <ul>
@@ -199,7 +193,7 @@
                 <div id="card__content__consoles" class="card__content"><i class="card__btn-close fa fa-times"></i>
                   <div class="card__copy">
                     <div class="meta"><img src="images/sprites/consoles.png" alt="author01" class="meta__avatar"><span class="meta__author">
-                        <h2>90's Consoles</h2></span><span class="meta__date">07/05/2015</span></div>
+                        <h2>90's Consoles</h2></span><span class="meta__date"> </span></div>
                     <p>I was born in the 90's. <br>When "The Fresh Prince of Bel Air" was the coolest TV show ever. <br>When kids used to go outside to play ball. <br>When the only social network available were Latin Chat, Hi5 or MySpace...and ( of course! ) the old, realible, immortal CONSOLES.</p>
                     <p>This is a website I made for Fun to show the 4 consoles that were part of my childhood...and I'm sure yours too!</p>
                     <p>Check out the website <a href='http://enzovezzaro.github.io/90-s-Consoles' target='_blank'>here</a></p><img src="images/sprites/WorkInProgress.png" class="WorkInProgress">
@@ -305,8 +299,8 @@
           </div>
         </div>
       </div>
-      <div class="skills">
-        <div class="skills-info">
+      <div id="skills-info-tools" class="skills">
+        <div id="skills-info" class="skills-info">
           <h1>Mad Skills</h1>
           <ul class="skillList">
             <li aria-label="elite" class="skill">HTML5</li>
@@ -316,31 +310,31 @@
             <li aria-label="advanced" class="skill">JADE</li>
           </ul>
         </div>
-        <div class="skills-tools">
+        <div id="skills-tools" class="skills-tools">
           <h1>The Killer Toolset</h1><img src="images/sprites/tools.svg">
         </div>
       </div>
-      <div class="activities">
+      <div id="activities-feed" class="activities">
         <div class="facebook"><div class="fb-page" data-href="https://www.facebook.com/beardencoder" data-width="100%" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/beardencoder"><a href="https://www.facebook.com/beardencoder">Bearded &#039;n Coder</a></blockquote></div></div></div>
         <div class="twitter"><a class="twitter-timeline" href="https://twitter.com/vezzaro_enzo" data-widget-id="651084571480489984">Tweets by @vezzaro_enzo</a></div>
       </div>
-      <div class="contact">
-        <div class="contact-info">
-          <form action="contact.php" method="post" enctype="text/plain">
+      <div id="contact-form" class="contact">
+        <div id="contact-info" class="contact-info">
+          <form action="contact-form-handler.php" method="post" enctype="text/plain">
             <div class="input input--hoshi">
-              <input id="input-4" type="text" name="ct_name" required class="input__field input__field--hoshi">
+              <input id="input-4" type="text" name="name" required class="input__field input__field--hoshi">
               <label for="input-4" class="input__label input__label--hoshi input__label--hoshi-color-1">
                 <div class="input__label-content input__label-content--hoshi">Name</div>
               </label>
             </div>
             <div class="input input--hoshi">
-              <input id="input-5" type="text" name="ct_email" required class="input__field input__field--hoshi">
+              <input id="input-5" type="text" name="email" required class="input__field input__field--hoshi">
               <label for="input-5" class="input__label input__label--hoshi input__label--hoshi-color-2">
                 <div class="input__label-content input__label-content--hoshi">Email</div>
               </label>
             </div>
             <div class="input input--hoshi">
-              <input id="input-6" type="text" name="ct_message" required class="input__field input__field--hoshi">
+              <input id="input-6" type="text" name="message" required class="input__field input__field--hoshi">
               <label for="input-6" class="input__label input__label--hoshi input__label--hoshi-color-3">
                 <div class="input__label-content input__label-content--hoshi">Say Hello</div>
               </label>
@@ -350,14 +344,14 @@
             </div>
           </form>
         </div>
-        <div class="contact-info-map"><iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=1839%20S%20Main%20St%2C%20Los%20Angeles%2C%20California%2C%20Stati%20Uniti&key=AIzaSyAjLqFAjrmX_EhLInGGDn9t6rtWOK9fsTg" allowfullscreen></iframe></div>
+        <div id="contact-info-map" class="contact-info-map"><iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=1839%20S%20Main%20St%2C%20Los%20Angeles%2C%20California%2C%20Stati%20Uniti&key=AIzaSyAjLqFAjrmX_EhLInGGDn9t6rtWOK9fsTg" allowfullscreen></iframe></div>
       </div>
       <!--include _includes/avatar.jade-->
       <div id="footer" class="footer">
-        <div class="copyright">
+        <div id="copyright" class="copyright">
           <p>Made with <i class="fa fa-heart-o"></i> by Enzo Vezzaro</p>
         </div>
-        <div class="socialMedia"><a href="https://www.facebook.com/evezzaro" target="_blank"><img src="images/sprites/facebook.svg"></a><a href="https://github.com/EnzoVezzaro" target="_blank"><img src="images/sprites/github.svg"></a><a href="https://plus.google.com/u/1/110959132958109398725" target="_blank"><img src="images/sprites/google.svg"></a><a href="https://www.linkedin.com/pub/enzo-junior-vezzaro/48/662/55b" target="_blank"><img src="images/sprites/linkedin.svg"></a><a href="https://twitter.com/vezzaro_enzo" target="_blank"><img src="images/sprites/twitter.svg"></a></div>
+        <div id="socialMedia" class="socialMedia"><a href="https://www.facebook.com/evezzaro" target="_blank"><img src="images/sprites/facebook.svg"></a><a href="https://github.com/EnzoVezzaro" target="_blank"><img src="images/sprites/github.svg"></a><a href="https://plus.google.com/u/1/110959132958109398725" target="_blank"><img src="images/sprites/google.svg"></a><a href="https://www.linkedin.com/pub/enzo-junior-vezzaro/48/662/55b" target="_blank"><img src="images/sprites/linkedin.svg"></a><a href="https://twitter.com/vezzaro_enzo" target="_blank"><img src="images/sprites/twitter.svg"></a></div>
       </div>
     </div>
     <div class="offcanvas">
