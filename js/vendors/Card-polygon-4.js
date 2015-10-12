@@ -243,7 +243,7 @@ var Card = (function(window, undefined) {
       $('#header').removeClass(CLASSES.headerHidden);
       $('#nav').removeClass(CLASSES.navHidden);
       $('#footer').removeClass(CLASSES.footerHidden);
-      $('.card').css('display', 'flex');
+      $('.card').css('display', 'block');
 
       this.isOpen = false;
 
