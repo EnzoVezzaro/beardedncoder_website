@@ -4,15 +4,13 @@
 
 console.log("Look at app/js/main.js");
 
-window.sr = new scrollReveal();
-
 //tada notification
 if ($(".new").hasClass("animated zoomIn")) {
   $("#notification").addClass("animated tada");
 };
 
 $("#notification").click(function () {
-  $(".offcanvas").css("transform", "translateX(0px)");
+  $(".offcanvas").css("-webkit-transform", "translateX(0px)");
   $(".new").removeClass("animated zoomIn");
   $(".new").addClass("animated zoomOut");
   $("#notification").removeClass("animated tada");
@@ -49,12 +47,12 @@ $("#arrow").click(function () {
 });
 
 $(".notification").mouseleave(function () {
-  $(".offcanvas").css("transform", "translateX(1100px)");
+  $(".offcanvas").css("-webkit-transform", "translateX(1100px)");
   $("#notification").removeClass("animated bounceIn");
 });
 
 $("#about").click(function () {
-  $(".about-me").css("display", "flex");
+  $(".about-me").css("display", "block");
   $(".card").css("display", "none");
   $(".skills").css("display", "none");
   $(".contact").css("display", "none");
@@ -79,7 +77,7 @@ $("#skills").click(function () {
   $(".about-me").css("display", "none");
   $(".card").css("display", "none");
   $(".container").css("display", "block");
-  $(".skills").css("display", "flex");
+  $(".skills").css("display", "block");
   $(".contact").css("display", "none");
   $(".activities").css("display", "none");
 });
@@ -90,7 +88,7 @@ $("#activities").click(function () {
   $(".container").css("display", "block");
   $(".skills").css("display", "none");
   $(".contact").css("display", "none");
-  $(".activities").css("display", "flex");
+  $(".activities").css("display", "block");
 });
 
 $("#contact").click(function () {
@@ -99,7 +97,7 @@ $("#contact").click(function () {
   $(".container").css("display", "block");
   $(".skills").css("display", "none");
   $(".activities").css("display", "none");
-  $(".contact").css("display", "flex");
+  $(".contact").css("display", "block");
 });
 
 //contact
@@ -176,5 +174,6 @@ $("#contact").click(function () {
   js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.4&appId=1657362801164157";
   fjs.parentNode.insertBefore(js, fjs);
 })(document, "script", "facebook-jssdk");
+//# sourceMappingURL=main.js.map
 
 },{}]},{},[1]);
